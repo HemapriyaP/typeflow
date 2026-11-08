@@ -1,0 +1,140 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  backdrop-filter: blur(20px);
+  background: rgba(10, 14, 26, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.navbar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  font-size: 20px;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.logo-flow {
+  background: linear-gradient(135deg, #00d4ff, #c77dff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.nav-link {
+  position: relative;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-link:hover {
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-link.active {
+  color: #fff;
+  background: rgba(0, 212, 255, 0.1);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background: #00d4ff;
+  border-radius: 2px;
+}
+
+/* Live dot */
+.nav-live-dot {
+  width: 7px;
+  height: 7px;
+  background: #00f5a0;
+  border-radius: 50%;
+  animation: livePulse 1s ease infinite;
+  flex-shrink: 0;
+}
+
+@keyframes livePulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+/* Live stats in navbar */
+.navbar-live {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  background: rgba(0, 245, 160, 0.08);
+  border: 1px solid rgba(0, 245, 160, 0.2);
+  border-radius: 100px;
+  font-family: 'Inter', sans-serif;
+}
+
+.live-badge {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #00f5a0;
+  background: rgba(0, 245, 160, 0.2);
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+.live-stat {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.live-sep {
+  color: rgba(255, 255, 255, 0.2);
+}
